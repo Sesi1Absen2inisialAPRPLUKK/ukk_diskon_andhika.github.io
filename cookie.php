@@ -1,7 +1,8 @@
 <?php
+include 'model.php';
 $theme = $_POST['theme'];
-$persist = $_POST['persist'];
+$persist = 0+isset($_POST['persist']);
 setcookie('theme', $theme, time()+86400);
 setcookie('persist', $persist, time()+86400);
-header('location:index.php');
+header('location: index.php')
 ?>
